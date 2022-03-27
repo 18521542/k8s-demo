@@ -2,12 +2,10 @@ FROM node:12
 
 WORKDIR /app
 
-COPY ../package*.json .
+COPY package*.json ./app
 
 RUN npm install
 
 COPY ../src ./src
-
-VOLUME [ "/app/node_modules" ]
 
 CMD ["npm", "start"]
