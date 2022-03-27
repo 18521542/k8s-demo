@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag duytronguit/k8sdemo
+      run: docker build ./infra --file Dockerfile --tag duytronguit/k8sdemo
     - name: Get Docker Hub Credentials
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       env:
