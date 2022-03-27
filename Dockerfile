@@ -6,6 +6,6 @@ COPY package*.json ./app/
 
 RUN npm install
 
-COPY ../src ./src/
+COPY /src ./app/
 
 CMD ["npm", "start"]
