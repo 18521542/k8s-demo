@@ -1,7 +1,7 @@
 var express = require("express")
 require('dotenv').config();
 var app = express();
-let host = process.env.host
+let host = process.env.host || "undefined"
 
 app.get("/", (req, res)=> {
     res.status(200).send({
