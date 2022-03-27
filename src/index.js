@@ -1,10 +1,12 @@
 var express = require("express")
-
+require('dotenv').config();
 var app = express();
+let host = process.env.host
 
 app.get("/", (req, res)=> {
     res.status(200).send({
-        message: "Hello"
+        message: "Hello",
+        envHost: host
     })
 })
 
