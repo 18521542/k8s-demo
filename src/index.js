@@ -6,7 +6,8 @@ let host = process.env.host || "undefined"
 app.get("/", (req, res)=> {
     res.status(200).send({
         message: "Hello",
-        envHost: host
+        envHost: host,
+        envLinh: process.env.linh || "undefined"
     })
 })
 
