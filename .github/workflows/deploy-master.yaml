@@ -21,3 +21,10 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
     - name: Push image
       run: docker push duytronguit/k8sdemo
+    # - uses: digitalocean/action-doctl@v2
+    #   with:
+    #     token: ${{ secrets.DO_Personal_Access_Token }}
+    # - name: Get DO cluster
+    #   run: doctl kubernetes cluster kubeconfig save k8s-demo
+    # - name: Get Source
+    #   run: kubectl rollout restart deployment app-be
